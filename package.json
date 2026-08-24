@@ -5,12 +5,17 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "coverage": "jest --coverage"
+    "coverage": "jest --coverage",
+    "test:ci": "jest --ci --reporters=default --reporters=jest-junit"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
+  "jest-junit": {
+    "outputDirectory": "reports",
+    "outputName": "junit.xml"
+  },
   "dependencies": {
     "express": "^5.2.1",
     "swagger-ui-express": "^5.0.1",
@@ -18,6 +23,7 @@
   },
   "devDependencies": {
     "jest": "^30.4.2",
+    "jest-junit": "^16.0.0",
     "supertest": "^7.2.2"
   }
 }
